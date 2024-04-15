@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from jobportal1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('ourprojects/', views.ourprojects, name='ourprojects'),
+    path('careers/', views.careers, name='careers'),
 ]
